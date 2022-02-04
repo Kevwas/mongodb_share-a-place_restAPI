@@ -28,7 +28,8 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.DB_URL)
+  // .connect(process.env.DB_URL)
+  .connect("mongodb+srv://mongo:mongotest@cluster0.xg2y5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
   .then(() => {
     app.listen(5000);
   })
